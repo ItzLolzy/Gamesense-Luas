@@ -28,7 +28,6 @@ local function onPaint()
 		amountPressed = amountPressed + 1
 		ui_set(newTag, true)
 		ui_set(skeetSlide, false)
-		print(amountPressed)
 	end
 	
 	if ui_get(newTag, true) then
