@@ -9,20 +9,14 @@ local skeetSlide = ui.reference("MISC", "Miscellaneous", "Clan tag spammer")
 local skeetUnload = ui.reference("MISC", "Other", "Unload")
 local newTag = ui.new_checkbox("MISC", "Miscellaneous", "Skeet clan tag")
 local stepw = 2
-local steph = 1
 local amountPressed = 0
 
 local function onPaint()
 	ui_set_visible(newTag, false)
 	if stepw > w  then
-				stepw = 1
-				ui_set(newTag, false)
-			end
-
-	if steph > h then
-				steph = 1
-
-			end
+		stepw = 1
+		ui_set(newTag, false)
+	end
 
 	if ui_get(skeetSlide, true) then
 		amountPressed = amountPressed + 1
@@ -32,7 +26,6 @@ local function onPaint()
 	
 	if ui_get(newTag, true) then
 		stepw = stepw + stepw/100
-		steph = steph + 1
 			renderer_text(hw + stepw, h/5, 255, 0, 0, 255, "+cb", 0, "NO!")
 	end
 
