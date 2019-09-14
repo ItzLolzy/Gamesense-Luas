@@ -26,7 +26,7 @@ local function onPaint()
 	
 	if ui_get(newTag, true) then
 		stepw = stepw + stepw/100
-			renderer_text(hw + stepw, h/5, 255, 0, 0, 255, "+cb", 0, "NO!")
+		renderer_text(hw + stepw, h/5, 255, 0, 0, 255, "+cb", 0, "NO!")
 	end
 
 	if amountPressed == 3 then
